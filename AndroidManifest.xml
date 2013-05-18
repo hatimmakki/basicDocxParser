@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="couchDev.tools.DocxParser"
+    android:versionCode="6"
+    android:versionName="1.5" >
+    
+    <uses-sdk android:minSdkVersion="3"
+          android:targetSdkVersion="18"
+ 	 />
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+	<uses-permission android:name="com.android.email.permission.READ_ATTACHMENT"></uses-permission>
+	<uses-permission android:name="com.android.email.permission.ACCESS_PROVIDER"></uses-permission>
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" 
+        android:allowBackup="true">
+        <activity
+            android:name=".DocxParserActivity"
+            android:label="@string/app_name" 
+            android:launchMode="singleTask"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+             <intent-filter>
+			    <action android:name="android.intent.action.VIEW" />
+			    <category android:name="android.intent.category.BROWSABLE" />
+			    <category android:name="android.intent.category.DEFAULT" />
+			    <data android:scheme="http" />
+			    <data android:scheme="https" />
+			    <data android:mimeType="*/*" />
+			    <data android:host="*" />
+			    <data android:pathPattern=".*\\.docx" />
+			  </intent-filter>
+			  <intent-filter>
+			    <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.EDIT" />
+			    <category android:name="android.intent.category.BROWSABLE" />
+			    <category android:name="android.intent.category.DEFAULT" />
+			    <data android:scheme="file" />
+			    <data android:mimeType="*/*" />
+			    <data android:host="*" />
+			    <data android:pathPattern=".*\\.docx" />
+			  </intent-filter>
+			  <intent-filter>
+				<action android:name="android.intent.action.VIEW"/>
+				<category android:name="android.intent.category.BROWSABLE"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+				<data android:pathPattern=".*\\.docx" android:host="*" android:mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.document"/>				
+        	  </intent-filter>
+        </activity>
+         <activity
+            android:name=".ShowFile"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            >
+        </activity>
+        <activity
+        android:name=".Preferences"
+        android:label="@string/set_preferences">
+		</activity>
+    </application>
+
+</manifest>

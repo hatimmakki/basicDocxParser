@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:weightSum="1" >
+
+    <couchDev.tools.DocxParser.FolderLayout android:layout_height="match_parent" layout="@layout/folderview"
+        android:layout_weight="0.35"
+        android:layout_width="fill_parent" android:id="@+id/localfolders">
+        
+    </couchDev.tools.DocxParser.FolderLayout>
+</LinearLayout>

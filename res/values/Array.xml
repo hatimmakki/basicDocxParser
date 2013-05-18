@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="listArray">
+           <item>Smaller</item>
+           <item>Small</item>
+           <item >Normal</item>
+           <item >Large</item>
+           <item >Larger</item>
+    </string-array>
+    <string-array name="listValues"><item>Smaller</item><item>Small</item>
+           
+           
+    <item >Normal</item>
+    <item >Large</item>
+    <item >Larger</item>
+    </string-array>
+</resources>
