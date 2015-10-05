@@ -21,15 +21,14 @@ public final class R {
         public static final int ic_menu_send=0x7f020003;
     }
     public static final class id {
-        public static final int content=0x7f070001;
-        public static final int filename=0x7f070000;
-        public static final int list=0x7f070003;
-        public static final int localfolders=0x7f070004;
-        public static final int menu_exit=0x7f070008;
-        public static final int menu_link=0x7f070007;
-        public static final int menu_preferences=0x7f070006;
-        public static final int path=0x7f070002;
-        public static final int rowtext=0x7f070005;
+        public static final int list=0x7f070002;
+        public static final int localfolders=0x7f070003;
+        public static final int menu_exit=0x7f070007;
+        public static final int menu_link=0x7f070006;
+        public static final int menu_preferences=0x7f070005;
+        public static final int path=0x7f070001;
+        public static final int rowtext=0x7f070004;
+        public static final int webViewPlaceholder=0x7f070000;
     }
     public static final class layout {
         public static final int file=0x7f030000;

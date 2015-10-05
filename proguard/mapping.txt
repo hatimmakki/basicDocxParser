@@ -1,0 +1,136 @@
+couchDev.tools.DocxParser.DocxParserActivity -> couchDev.tools.DocxParser.DocxParserActivity:
+    couchDev.tools.DocxParser.FolderLayout localFolders -> a
+    couchDev.tools.DocxParser.Extractor extractor -> b
+    java.io.File file -> c
+    java.lang.Boolean externalOpen -> d
+    boolean loading -> e
+    android.app.Activity showFile -> f
+    android.app.ProgressDialog dialog -> g
+    couchDev.tools.DocxParser.DocxParserActivity$KillReceiver mKillReceiver -> k
+    couchDev.tools.DocxParser.DocxParserActivity$ReloadReceiver mReloadReceiver -> l
+    boolean invertColors -> h
+    java.lang.String textSize -> i
+    boolean reloadOnResume -> j
+    void handleURI(android.net.Uri) -> a
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+    void onNewIntent(android.content.Intent) -> onNewIntent
+    void onDestroy() -> onDestroy
+    void cleanTempFiles() -> a
+    void onCreate(android.os.Bundle) -> onCreate
+    void onStart() -> onStart
+    void getPrefs() -> e
+    void OnCannotFileRead(java.io.File) -> a
+    void OnFileClicked(java.io.File) -> b
+    void onResume() -> onResume
+    void onPause() -> onPause
+    java.lang.Object onRetainNonConfigurationInstance() -> onRetainNonConfigurationInstance
+    void loadingDialog() -> f
+    void notDocx() -> b
+    void DoneLoading() -> c
+    boolean isExternalOpen() -> d
+    void onBackPressed() -> onBackPressed
+couchDev.tools.DocxParser.DocxParserActivity$1 -> couchDev.tools.DocxParser.a:
+    couchDev.tools.DocxParser.DocxParserActivity this$0 -> a
+    void onClick(android.content.DialogInterface,int) -> onClick
+couchDev.tools.DocxParser.DocxParserActivity$2 -> couchDev.tools.DocxParser.b:
+    couchDev.tools.DocxParser.DocxParserActivity this$0 -> a
+    void onCancel(android.content.DialogInterface) -> onCancel
+couchDev.tools.DocxParser.DocxParserActivity$KillReceiver -> couchDev.tools.DocxParser.c:
+    couchDev.tools.DocxParser.DocxParserActivity this$0 -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+couchDev.tools.DocxParser.DocxParserActivity$ReloadReceiver -> couchDev.tools.DocxParser.d:
+    couchDev.tools.DocxParser.DocxParserActivity this$0 -> a
+    void onReceive(android.content.Context,android.content.Intent) -> onReceive
+couchDev.tools.DocxParser.DocxParserActivity$SettingsHolder -> couchDev.tools.DocxParser.e:
+    boolean loading -> a
+    boolean reloadOnResume -> b
+    couchDev.tools.DocxParser.Extractor extractor -> c
+    java.io.File file -> d
+    android.app.Activity showFile -> e
+couchDev.tools.DocxParser.Extractor -> couchDev.tools.DocxParser.f:
+    android.content.Context parent -> c
+    java.lang.String filename -> d
+    java.io.File cachePath -> e
+    boolean done -> f
+    boolean waitForIt -> g
+    boolean invertColors -> a
+    java.lang.String textSize -> b
+    android.net.Uri fileUri -> h
+    boolean isDone() -> a
+    void setParent(android.content.Context) -> a
+    java.lang.Boolean doInBackground(android.net.Uri[]) -> a
+    void onPostExecute(java.lang.Boolean) -> a
+    void WaitForIt() -> b
+    void DoPostExecute() -> c
+    boolean unpackZipToCache(android.net.Uri) -> a
+    void onPostExecute(java.lang.Object) -> onPostExecute
+    java.lang.Object doInBackground(java.lang.Object[]) -> doInBackground
+couchDev.tools.DocxParser.FolderLayout -> couchDev.tools.DocxParser.FolderLayout:
+    android.content.Context context -> a
+    couchDev.tools.DocxParser.IFolderItemListener folderListener -> b
+    java.util.List item -> c
+    java.util.List path -> d
+    java.lang.String root -> e
+    boolean isRoot -> f
+    android.widget.TextView myPath -> g
+    android.widget.ListView lstView -> h
+    java.lang.String currPath -> i
+    boolean isRoot() -> a
+    java.lang.String getCurrPath() -> getCurrPath
+    void setIFolderItemListener(couchDev.tools.DocxParser.IFolderItemListener) -> setIFolderItemListener
+    void setDir(java.lang.String) -> setDir
+    void getDir(java.lang.String,android.widget.ListView) -> a
+    void setItemList(java.util.List) -> setItemList
+    void onListItemClick(android.widget.ListView,android.view.View,int,long) -> a
+    void onItemClick(android.widget.AdapterView,android.view.View,int,long) -> onItemClick
+couchDev.tools.DocxParser.IFolderItemListener -> couchDev.tools.DocxParser.g:
+    void OnCannotFileRead(java.io.File) -> a
+    void OnFileClicked(java.io.File) -> b
+couchDev.tools.DocxParser.MarkupConverter -> couchDev.tools.DocxParser.h:
+    java.lang.String header -> a
+    java.lang.String footer -> b
+    java.lang.String encoding -> c
+    java.io.File fin -> d
+    java.io.File fout -> e
+    java.util.HashMap pairs -> f
+    java.io.BufferedReader in -> g
+    java.io.Writer out -> h
+    int requiredBufferSize -> i
+    char[][] keys -> j
+    java.lang.String[] values -> k
+    int[] hits -> l
+    java.util.LinkedList rollingWindow -> m
+    void addHeader(java.lang.String) -> a
+    void addFooter(java.lang.String) -> b
+    boolean prepare() -> a
+    boolean step() -> b
+    boolean finish() -> c
+couchDev.tools.DocxParser.Preferences -> couchDev.tools.DocxParser.Preferences:
+    void onCreate(android.os.Bundle) -> onCreate
+couchDev.tools.DocxParser.RegexFileFilter -> couchDev.tools.DocxParser.i:
+    java.util.regex.Pattern filterPattern -> a
+    boolean accept(java.io.File) -> accept
+couchDev.tools.DocxParser.ShowFile -> couchDev.tools.DocxParser.ShowFile:
+    android.widget.FrameLayout webViewPlaceholder -> a
+    android.webkit.WebView webView -> b
+    java.lang.Boolean invertColors -> c
+    java.lang.String textSize -> d
+    void onSaveInstanceState(android.os.Bundle) -> onSaveInstanceState
+    void onRestoreInstanceState(android.os.Bundle) -> onRestoreInstanceState
+    void onConfigurationChanged(android.content.res.Configuration) -> onConfigurationChanged
+    void onCreate(android.os.Bundle) -> onCreate
+    void initUI() -> a
+    void onBackPressed() -> onBackPressed
+    boolean onCreateOptionsMenu(android.view.Menu) -> onCreateOptionsMenu
+    void onStart() -> onStart
+    void getPrefs() -> b
+    boolean onOptionsItemSelected(android.view.MenuItem) -> onOptionsItemSelected
+couchDev.tools.DocxParser.ShowFile$1 -> couchDev.tools.DocxParser.j:
+    couchDev.tools.DocxParser.ShowFile this$0 -> a
+    android.app.ProgressDialog val$pd -> b
+    void onPageFinished(android.webkit.WebView,java.lang.String) -> onPageFinished
+    void onLoadResource(android.webkit.WebView,java.lang.String) -> onLoadResource
+couchDev.tools.DocxParser.StringLengthComparitor -> couchDev.tools.DocxParser.k:
+    int compare(java.util.Map$Entry,java.util.Map$Entry) -> a
+    int compare(java.lang.Object,java.lang.Object) -> compare

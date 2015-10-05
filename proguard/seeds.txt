@@ -1,0 +1,38 @@
+couchDev.tools.DocxParser.DocxParserActivity
+couchDev.tools.DocxParser.DocxParserActivity: DocxParserActivity()
+couchDev.tools.DocxParser.FolderLayout
+couchDev.tools.DocxParser.FolderLayout: FolderLayout(android.content.Context,android.util.AttributeSet)
+couchDev.tools.DocxParser.FolderLayout: java.lang.String getCurrPath()
+couchDev.tools.DocxParser.FolderLayout: void setIFolderItemListener(couchDev.tools.DocxParser.IFolderItemListener)
+couchDev.tools.DocxParser.FolderLayout: void setDir(java.lang.String)
+couchDev.tools.DocxParser.FolderLayout: void setItemList(java.util.List)
+couchDev.tools.DocxParser.Preferences
+couchDev.tools.DocxParser.Preferences: Preferences()
+couchDev.tools.DocxParser.R$array: int listArray
+couchDev.tools.DocxParser.R$array: int listValues
+couchDev.tools.DocxParser.R$drawable: int ic_launcher
+couchDev.tools.DocxParser.R$drawable: int ic_menu_close_clear_cancel
+couchDev.tools.DocxParser.R$drawable: int ic_menu_preferences
+couchDev.tools.DocxParser.R$drawable: int ic_menu_send
+couchDev.tools.DocxParser.R$id: int list
+couchDev.tools.DocxParser.R$id: int localfolders
+couchDev.tools.DocxParser.R$id: int menu_exit
+couchDev.tools.DocxParser.R$id: int menu_link
+couchDev.tools.DocxParser.R$id: int menu_preferences
+couchDev.tools.DocxParser.R$id: int path
+couchDev.tools.DocxParser.R$id: int rowtext
+couchDev.tools.DocxParser.R$id: int webViewPlaceholder
+couchDev.tools.DocxParser.R$layout: int file
+couchDev.tools.DocxParser.R$layout: int folderview
+couchDev.tools.DocxParser.R$layout: int main
+couchDev.tools.DocxParser.R$layout: int preferences
+couchDev.tools.DocxParser.R$layout: int row
+couchDev.tools.DocxParser.R$menu: int menu
+couchDev.tools.DocxParser.R$string: int Path
+couchDev.tools.DocxParser.R$string: int action_label_exit
+couchDev.tools.DocxParser.R$string: int action_label_link
+couchDev.tools.DocxParser.R$string: int action_label_preferences
+couchDev.tools.DocxParser.R$string: int app_name
+couchDev.tools.DocxParser.R$string: int set_preferences
+couchDev.tools.DocxParser.ShowFile
+couchDev.tools.DocxParser.ShowFile: ShowFile()

@@ -106,11 +106,16 @@ public class Extractor extends AsyncTask<Uri,Integer,Boolean>{
          ZipInputStream zin;
          try
          {
-        	 if (filePath.getScheme().equals("http") || filePath.getScheme().equals("https")){
-        		is = new URL(filePath.toString()).openStream();
- 	        }else{
- 	        	is = parent.getContentResolver().openInputStream(filePath);
- 	        }
+        	try{
+	            if (filePath.getScheme().equals("http") || filePath.getScheme().equals("https")){	        		
+	        		is = new URL(filePath.toString()).openStream();
+	 	        }else{
+	 	        	is = parent.getContentResolver().openInputStream(filePath);
+	 	        }
+     		}catch(java.lang.SecurityException e){
+     			return false;
+     		}        		 
+
              zin = new ZipInputStream(new BufferedInputStream(is));          
              ZipEntry ze;
              boolean wasDocx = false;
@@ -132,6 +137,8 @@ public class Extractor extends AsyncTask<Uri,Integer,Boolean>{
               	   fos.close();
               	   
               	 HashMap<String, String> conversions = new HashMap<String, String>();
+              	 conversions.put("<tblPr>","");
+                 conversions.put("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>","");
               	 conversions.put("tab/>","z/>&nbsp;&nbsp;&nbsp;&nbsp;");
               	 conversions.put("w:val=\"","class=\"c");
               	 conversions.put("tc>","td>");
@@ -166,9 +173,10 @@ public class Extractor extends AsyncTask<Uri,Integer,Boolean>{
                 	bulletColour = "background-color:black;";
                 }
                 
-              	xmlToHTML.addHeader("<html>" +
-              			"<META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=utf-8\">" +
+              	xmlToHTML.addHeader("<!DOCTYPE html><html>" +              			
               			"<head>" +
+              			"<META HTTP-EQUIV=\"Content-Type\" CONTENT=\"text/html; charset=utf-8\" />" +
+              			"<title> </title>" +
               			"<style type='text/css'>" +
               			"	body{"+colouring+" "+textSizing+"}" +
               			"	p{"+colouring+" "+textSizing+"}" +

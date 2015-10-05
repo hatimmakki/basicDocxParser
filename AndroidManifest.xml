@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="couchDev.tools.DocxParser"
-    android:versionCode="6"
-    android:versionName="1.5" >
+    android:versionCode="7"
+    android:versionName="1.5.1" >
     
-    <uses-sdk android:minSdkVersion="3"
-          android:targetSdkVersion="18"
+    <uses-sdk android:minSdkVersion="8"
+          android:targetSdkVersion="8"
  	 />
 	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
@@ -52,8 +52,9 @@
 				<data android:pathPattern=".*\\.docx" android:host="*" android:mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.document"/>				
         	  </intent-filter>
         </activity>
-         <activity
+         <activity			
             android:name=".ShowFile"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout"
             android:label="@string/app_name"
             android:launchMode="singleTask"
             >

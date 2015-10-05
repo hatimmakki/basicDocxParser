@@ -1,0 +1,19 @@
+android.annotation.SuppressLint
+android.annotation.TargetApi
+couchDev.tools.DocxParser.BuildConfig
+couchDev.tools.DocxParser.DocxParserActivity:
+    44:44:public boolean getReloadOnResume()
+    216:217:public void setShowFile(android.app.Activity)
+    220:223:public void killShowFile()
+couchDev.tools.DocxParser.R
+couchDev.tools.DocxParser.R$array
+couchDev.tools.DocxParser.R$attr
+couchDev.tools.DocxParser.R$drawable
+couchDev.tools.DocxParser.R$id
+couchDev.tools.DocxParser.R$layout
+couchDev.tools.DocxParser.R$menu
+couchDev.tools.DocxParser.R$string
+couchDev.tools.DocxParser.ShowFile:
+    145:151:public static java.lang.String convertStreamToString(java.io.InputStream)
+    155:160:public java.lang.String getStringFromFile()
+    163:164:public void toastThis(java.lang.String)
